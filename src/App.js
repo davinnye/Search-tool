@@ -31,7 +31,7 @@ function App() {
     <div className="container">
       <h1 className='title'>Find ZIP Code/CEP</h1>
       
-      <div classname="containerInput">
+      <div className="containerInput">
         <input type="text"
         placeholder="Enter CEP"
         value={input}
