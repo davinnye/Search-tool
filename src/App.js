@@ -18,7 +18,7 @@ function App() {
     try {
       const response = await api.get(`${input}/json`)
       console.log(response.data)
-      setCep(Response.data)
+      setCep(response.data)
       setInput("")
     }
     catch{
@@ -29,11 +29,11 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className='title'>Find your ZIP Code/CEP</h1>
+      <h1 className='title'>Find ZIP Code/CEP</h1>
       
       <div classname="containerInput">
         <input type="text"
-        placeholder="Enter your ZIP Code/CEP"
+        placeholder="Enter CEP"
         value={input}
         onChange={(e) => setInput(e.target.value)}/>
       
@@ -41,7 +41,8 @@ function App() {
           <FiSearch size={25} color="#FFF"/>
         </button>
       </div>
-
+      
+      
       {Object.keys(cep).length > 0 && (
 
           <main className='main'>
